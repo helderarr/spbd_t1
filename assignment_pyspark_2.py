@@ -1,13 +1,15 @@
 import pyspark
 
+pickup_location_position = 7
+dropoff_location_position = 8
 
 
-def get_month(line):
+def get_pickup_dropoff_pairs(line):
     """ Returns the month from a line"""
     columns = line.split(';')
-    start_timestamp = columns[start_timestamp_position - 1]
-    start_timestamp = datetime.strptime(start_timestamp, "%m/%d/%Y %I:%M:%S %p")
-    return start_timestamp.month
+    pickup_location = columns[pickup_location_position - 1]
+    dropoff_location = columns[dropoff_location_position - 1]
+    return (pickup_location, dropoff_location)
 
 
 sc = pyspark.SparkContext('local[*]')
@@ -16,13 +18,17 @@ try:
     lines = sc.textFile('data/Taxi_Trips_151MB.csv')
     # data quality: remove empty lines
     non_empty_lines = lines.filter(lambda line: len(line) > 0)
-    # creates pais (month,1) for aggregating months count
-    line_months = non_empty_lines.map(lambda line: (get_month(line), 1))
-    # applies the aggregation function
-    occurrences = line_months.reduceByKey(sum)
-    # computes and iterates for all months
-    for (k, v) in occurrences.collect():
-        print(k, v)
+    # obtain pickup dropoff pairs
+    pickup_dropoff_pairs = non_empty_lines.map(lambda line: (get_pickup_dropoff_pairs(line)))
+    # remove duplicate pairs
+    distinct_pairs = pickup_dropoff_pairs.distinct()
+    # remove inconsistent data
+    non_empty_distinct_pairs = distinct_pairs.filter(lambda pair:  len(pair[0]) > 0 and len(pair[1]) > 0)
+    # group dropoff locations by pickup locations
+    pickup_dropoff_pairs = non_empty_distinct_pairs.groupByKey()
+    # computes and iterates for all pickup locations
+    for pickup, dropoffs in pickup_dropoff_pairs.collect():
+        print(pickup, dropoffs.data)
 
     sc.stop()
 except:
