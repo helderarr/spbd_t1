@@ -10,7 +10,9 @@ pickup_location_position = 7
 
 
 def get_line_data(line):
-    """ Returns the month from a line"""
+    """ Returns data from a line.
+        All members are strings
+    """
     columns = line.split(';')
     start_timestamp = columns[start_timestamp_position - 1]
     start_timestamp = datetime.strptime(start_timestamp, "%m/%d/%Y %I:%M:%S %p")
@@ -66,6 +68,7 @@ try:
     zero_val = (0, 0.0, 0)
     data = data.aggregateByKey(zero_val, seq_op, comb_op)
 
+    # transforms into (key , (avg trip_seconds, avg trip_miles))
     data = data.map(lambda elem: (elem[0], (elem[1][0] / elem[1][2], elem[1][1] / elem[1][2])))
 
     # computes and iterates for all pickup locations
