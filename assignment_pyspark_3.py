@@ -23,7 +23,7 @@ def get_line_data(line):
         start_timestamp.weekday(),
         start_timestamp.strftime("%I%p"))
 
-    return (key, (trip_seconds, trip_miles))
+    return key, (trip_seconds, trip_miles)
 
 
 def is_line_data_valid(elem):
