@@ -1,0 +1,654 @@
+2020-10-30 18:00:23,932 INFO impl.MetricsConfig: Loaded properties from hadoop-metrics2.properties
+2020-10-30 18:00:24,074 INFO impl.MetricsSystemImpl: Scheduled Metric snapshot period at 10 second(s).
+2020-10-30 18:00:24,074 INFO impl.MetricsSystemImpl: JobTracker metrics system started
+2020-10-30 18:00:24,102 WARN impl.MetricsSystemImpl: JobTracker metrics system already initialized!
+2020-10-30 18:00:24,304 INFO mapred.FileInputFormat: Total input files to process : 1
+2020-10-30 18:00:24,327 INFO mapreduce.JobSubmitter: number of splits:5
+2020-10-30 18:00:24,510 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local194963239_0001
+2020-10-30 18:00:24,510 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2020-10-30 18:00:24,758 INFO mapred.LocalDistributedCacheManager: Localized file:/home/jovyan/assignment1/mapper_2.py as file:/tmp/hadoop-jovyan/mapred/local/job_local194963239_0001_c075f8da-d9fa-4ef2-af85-2811ba14b5fc/mapper_2.py
+2020-10-30 18:00:24,807 INFO mapred.LocalDistributedCacheManager: Localized file:/home/jovyan/assignment1/reducer_2.py as file:/tmp/hadoop-jovyan/mapred/local/job_local194963239_0001_6ae56e5b-74d1-4465-9952-ba41247e2a2c/reducer_2.py
+2020-10-30 18:00:24,886 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+2020-10-30 18:00:24,889 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+2020-10-30 18:00:24,890 INFO mapreduce.Job: Running job: job_local194963239_0001
+2020-10-30 18:00:24,892 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapred.FileOutputCommitter
+2020-10-30 18:00:24,898 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:24,898 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:24,945 INFO mapred.LocalJobRunner: Waiting for map tasks
+2020-10-30 18:00:24,952 INFO mapred.LocalJobRunner: Starting task: attempt_local194963239_0001_m_000000_0
+2020-10-30 18:00:25,000 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:25,000 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:25,048 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2020-10-30 18:00:25,065 INFO mapred.MapTask: Processing split: file:/home/jovyan/assignment1/Taxi_Trips_151MB.csv:0+33554432
+2020-10-30 18:00:25,081 INFO mapred.MapTask: numReduceTasks: 1
+2020-10-30 18:00:25,153 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2020-10-30 18:00:25,153 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2020-10-30 18:00:25,154 INFO mapred.MapTask: soft limit at 83886080
+2020-10-30 18:00:25,154 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2020-10-30 18:00:25,154 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2020-10-30 18:00:25,160 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-10-30 18:00:25,180 INFO streaming.PipeMapRed: PipeMapRed exec [/home/jovyan/assignment1/./mapper_2.py]
+2020-10-30 18:00:25,187 INFO Configuration.deprecation: mapred.work.output.dir is deprecated. Instead, use mapreduce.task.output.dir
+2020-10-30 18:00:25,188 INFO Configuration.deprecation: map.input.start is deprecated. Instead, use mapreduce.map.input.start
+2020-10-30 18:00:25,189 INFO Configuration.deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+2020-10-30 18:00:25,189 INFO Configuration.deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2020-10-30 18:00:25,190 INFO Configuration.deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+2020-10-30 18:00:25,190 INFO Configuration.deprecation: mapred.local.dir is deprecated. Instead, use mapreduce.cluster.local.dir
+2020-10-30 18:00:25,190 INFO Configuration.deprecation: map.input.file is deprecated. Instead, use mapreduce.map.input.file
+2020-10-30 18:00:25,191 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+2020-10-30 18:00:25,192 INFO Configuration.deprecation: map.input.length is deprecated. Instead, use mapreduce.map.input.length
+2020-10-30 18:00:25,193 INFO Configuration.deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+2020-10-30 18:00:25,193 INFO Configuration.deprecation: user.name is deprecated. Instead, use mapreduce.job.user.name
+2020-10-30 18:00:25,194 INFO Configuration.deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+/home/jovyan/assignment1/./mapper_2.py: 2: /home/jovyan/assignment1/./mapper_2.py: import: not found
+2020-10-30 18:00:25,214 INFO streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 4: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 6: /home/jovyan/assignment1/./mapper_2.py: from: not found
+/home/jovyan/assignment1/./mapper_2.py: 9: /home/jovyan/assignment1/./mapper_2.py: start_timestamp_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 12: /home/jovyan/assignment1/./mapper_2.py: trip_miles_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 15: /home/jovyan/assignment1/./mapper_2.py: trip_total_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 20: /home/jovyan/assignment1/./mapper_2.py: Syntax error: word unexpected (expecting "do")
+2020-10-30 18:00:25,215 INFO streaming.PipeMapRed: R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,215 INFO streaming.PipeMapRed: MRErrorThread done
+2020-10-30 18:00:25,220 INFO streaming.PipeMapRed: R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,226 INFO streaming.PipeMapRed: R/W/S=345/0/0 in:NA [rec/s] out:NA [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 HOST=null
+USER=null
+HADOOP_USER=null
+last tool output: |null|
+
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeUTF8(TextInputWriter.java:72)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeValue(TextInputWriter.java:51)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:106)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,230 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,231 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,231 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,231 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,232 INFO mapred.LocalJobRunner: Starting task: attempt_local194963239_0001_m_000001_0
+2020-10-30 18:00:25,233 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:25,233 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:25,234 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2020-10-30 18:00:25,236 INFO mapred.MapTask: Processing split: file:/home/jovyan/assignment1/Taxi_Trips_151MB.csv:33554432+33554432
+2020-10-30 18:00:25,240 INFO mapred.MapTask: numReduceTasks: 1
+2020-10-30 18:00:25,294 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2020-10-30 18:00:25,294 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2020-10-30 18:00:25,294 INFO mapred.MapTask: soft limit at 83886080
+2020-10-30 18:00:25,294 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2020-10-30 18:00:25,294 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2020-10-30 18:00:25,296 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-10-30 18:00:25,306 INFO streaming.PipeMapRed: PipeMapRed exec [/home/jovyan/assignment1/./mapper_2.py]
+2020-10-30 18:00:25,329 INFO streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,329 INFO streaming.PipeMapRed: R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 2: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 4: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 6: /home/jovyan/assignment1/./mapper_2.py: from: not found
+/home/jovyan/assignment1/./mapper_2.py: 9: /home/jovyan/assignment1/./mapper_2.py: start_timestamp_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 12: /home/jovyan/assignment1/./mapper_2.py: trip_miles_position: not found
+2020-10-30 18:00:25,331 INFO streaming.PipeMapRed: R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 15: /home/jovyan/assignment1/./mapper_2.py: trip_total_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 20: /home/jovyan/assignment1/./mapper_2.py: Syntax error: word unexpected (expecting "do")
+2020-10-30 18:00:25,331 INFO streaming.PipeMapRed: MRErrorThread done
+2020-10-30 18:00:25,336 INFO streaming.PipeMapRed: R/W/S=443/0/0 in:NA [rec/s] out:NA [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 HOST=null
+USER=null
+HADOOP_USER=null
+last tool output: |null|
+
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeUTF8(TextInputWriter.java:72)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeValue(TextInputWriter.java:51)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:106)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,336 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,336 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,337 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,337 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,337 INFO mapred.LocalJobRunner: Starting task: attempt_local194963239_0001_m_000002_0
+2020-10-30 18:00:25,339 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:25,339 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:25,340 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2020-10-30 18:00:25,341 INFO mapred.MapTask: Processing split: file:/home/jovyan/assignment1/Taxi_Trips_151MB.csv:67108864+33554432
+2020-10-30 18:00:25,343 INFO mapred.MapTask: numReduceTasks: 1
+2020-10-30 18:00:25,396 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2020-10-30 18:00:25,396 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2020-10-30 18:00:25,396 INFO mapred.MapTask: soft limit at 83886080
+2020-10-30 18:00:25,396 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2020-10-30 18:00:25,396 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2020-10-30 18:00:25,397 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-10-30 18:00:25,409 INFO streaming.PipeMapRed: PipeMapRed exec [/home/jovyan/assignment1/./mapper_2.py]
+2020-10-30 18:00:25,427 INFO streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,427 INFO streaming.PipeMapRed: R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,428 INFO streaming.PipeMapRed: R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 2: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 4: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 6: /home/jovyan/assignment1/./mapper_2.py: from: not found
+/home/jovyan/assignment1/./mapper_2.py: 9: /home/jovyan/assignment1/./mapper_2.py: start_timestamp_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 12: /home/jovyan/assignment1/./mapper_2.py: trip_miles_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 15: /home/jovyan/assignment1/./mapper_2.py: trip_total_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 20: /home/jovyan/assignment1/./mapper_2.py: Syntax error: word unexpected (expecting "do")
+2020-10-30 18:00:25,429 INFO streaming.PipeMapRed: R/W/S=319/0/0 in:NA [rec/s] out:NA [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 HOST=null
+USER=null
+HADOOP_USER=null
+last tool output: |null|
+
+java.io.IOException: Broken pipe
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeUTF8(TextInputWriter.java:72)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeValue(TextInputWriter.java:51)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:106)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,429 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,429 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,430 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,430 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,429 INFO streaming.PipeMapRed: MRErrorThread done
+2020-10-30 18:00:25,431 INFO mapred.LocalJobRunner: Starting task: attempt_local194963239_0001_m_000003_0
+2020-10-30 18:00:25,432 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:25,432 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:25,432 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2020-10-30 18:00:25,434 INFO mapred.MapTask: Processing split: file:/home/jovyan/assignment1/Taxi_Trips_151MB.csv:100663296+33554432
+2020-10-30 18:00:25,435 INFO mapred.MapTask: numReduceTasks: 1
+2020-10-30 18:00:25,484 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2020-10-30 18:00:25,484 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2020-10-30 18:00:25,484 INFO mapred.MapTask: soft limit at 83886080
+2020-10-30 18:00:25,484 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2020-10-30 18:00:25,484 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2020-10-30 18:00:25,486 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-10-30 18:00:25,494 INFO streaming.PipeMapRed: PipeMapRed exec [/home/jovyan/assignment1/./mapper_2.py]
+2020-10-30 18:00:25,511 INFO streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,511 INFO streaming.PipeMapRed: R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,512 INFO streaming.PipeMapRed: R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 2: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 4: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 6: /home/jovyan/assignment1/./mapper_2.py: from: not found
+/home/jovyan/assignment1/./mapper_2.py: 9: /home/jovyan/assignment1/./mapper_2.py: start_timestamp_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 12: /home/jovyan/assignment1/./mapper_2.py: trip_miles_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 15: /home/jovyan/assignment1/./mapper_2.py: trip_total_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 20: /home/jovyan/assignment1/./mapper_2.py: Syntax error: word unexpected (expecting "do")
+2020-10-30 18:00:25,513 INFO streaming.PipeMapRed: MRErrorThread done
+2020-10-30 18:00:25,513 INFO streaming.PipeMapRed: R/W/S=318/0/0 in:NA [rec/s] out:NA [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 HOST=null
+USER=null
+HADOOP_USER=null
+last tool output: |null|
+
+java.io.IOException: Broken pipe
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeUTF8(TextInputWriter.java:72)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeValue(TextInputWriter.java:51)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:106)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,513 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,514 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,514 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,515 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,515 INFO mapred.LocalJobRunner: Starting task: attempt_local194963239_0001_m_000004_0
+2020-10-30 18:00:25,516 INFO output.FileOutputCommitter: File Output Committer Algorithm version is 2
+2020-10-30 18:00:25,516 INFO output.FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+2020-10-30 18:00:25,517 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+2020-10-30 18:00:25,518 INFO mapred.MapTask: Processing split: file:/home/jovyan/assignment1/Taxi_Trips_151MB.csv:134217728+24537049
+2020-10-30 18:00:25,519 INFO mapred.MapTask: numReduceTasks: 1
+2020-10-30 18:00:25,568 INFO mapred.MapTask: (EQUATOR) 0 kvi 26214396(104857584)
+2020-10-30 18:00:25,569 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 100
+2020-10-30 18:00:25,569 INFO mapred.MapTask: soft limit at 83886080
+2020-10-30 18:00:25,569 INFO mapred.MapTask: bufstart = 0; bufvoid = 104857600
+2020-10-30 18:00:25,569 INFO mapred.MapTask: kvstart = 26214396; length = 6553600
+2020-10-30 18:00:25,570 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+2020-10-30 18:00:25,582 INFO streaming.PipeMapRed: PipeMapRed exec [/home/jovyan/assignment1/./mapper_2.py]
+2020-10-30 18:00:25,601 INFO streaming.PipeMapRed: R/W/S=1/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,602 INFO streaming.PipeMapRed: R/W/S=10/0/0 in:NA [rec/s] out:NA [rec/s]
+2020-10-30 18:00:25,602 INFO streaming.PipeMapRed: R/W/S=100/0/0 in:NA [rec/s] out:NA [rec/s]
+/home/jovyan/assignment1/./mapper_2.py: 2: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 4: /home/jovyan/assignment1/./mapper_2.py: import: not found
+/home/jovyan/assignment1/./mapper_2.py: 6: /home/jovyan/assignment1/./mapper_2.py: from: not found
+/home/jovyan/assignment1/./mapper_2.py: 9: /home/jovyan/assignment1/./mapper_2.py: start_timestamp_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 12: /home/jovyan/assignment1/./mapper_2.py: trip_miles_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 15: /home/jovyan/assignment1/./mapper_2.py: trip_total_position: not found
+/home/jovyan/assignment1/./mapper_2.py: 20: /home/jovyan/assignment1/./mapper_2.py: Syntax error: word unexpected (expecting "do")
+2020-10-30 18:00:25,603 INFO streaming.PipeMapRed: R/W/S=319/0/0 in:NA [rec/s] out:NA [rec/s]
+minRecWrittenToEnableSkip_=9223372036854775807 HOST=null
+USER=null
+HADOOP_USER=null
+last tool output: |null|
+
+java.io.IOException: Broken pipe
+	at java.io.FileOutputStream.writeBytes(Native Method)
+	at java.io.FileOutputStream.write(FileOutputStream.java:326)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:126)
+	at java.io.DataOutputStream.write(DataOutputStream.java:107)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeUTF8(TextInputWriter.java:72)
+	at org.apache.hadoop.streaming.io.TextInputWriter.writeValue(TextInputWriter.java:51)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:106)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,604 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,604 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.map(PipeMapper.java:120)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:54)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,605 WARN streaming.PipeMapRed: {}
+java.io.IOException: Stream closed
+	at java.lang.ProcessBuilder$NullOutputStream.write(ProcessBuilder.java:433)
+	at java.io.OutputStream.write(OutputStream.java:116)
+	at java.io.BufferedOutputStream.write(BufferedOutputStream.java:122)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at java.io.DataOutputStream.flush(DataOutputStream.java:123)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:532)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,605 INFO streaming.PipeMapRed: PipeMapRed failed!
+java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,604 INFO streaming.PipeMapRed: MRErrorThread done
+2020-10-30 18:00:25,606 INFO mapred.LocalJobRunner: map task executor complete.
+2020-10-30 18:00:25,606 WARN mapred.LocalJobRunner: job_local194963239_0001
+java.lang.Exception: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.runTasks(LocalJobRunner.java:492)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:552)
+Caused by: java.lang.RuntimeException: PipeMapRed.waitOutputThreads(): subprocess failed with code 2
+	at org.apache.hadoop.streaming.PipeMapRed.waitOutputThreads(PipeMapRed.java:326)
+	at org.apache.hadoop.streaming.PipeMapRed.mapRedFinished(PipeMapRed.java:539)
+	at org.apache.hadoop.streaming.PipeMapper.close(PipeMapper.java:130)
+	at org.apache.hadoop.mapred.MapRunner.run(MapRunner.java:61)
+	at org.apache.hadoop.streaming.PipeMapRunner.run(PipeMapRunner.java:34)
+	at org.apache.hadoop.mapred.MapTask.runOldMapper(MapTask.java:465)
+	at org.apache.hadoop.mapred.MapTask.run(MapTask.java:349)
+	at org.apache.hadoop.mapred.LocalJobRunner$Job$MapTaskRunnable.run(LocalJobRunner.java:271)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-10-30 18:00:25,904 INFO mapreduce.Job: Job job_local194963239_0001 running in uber mode : false
+2020-10-30 18:00:25,907 INFO mapreduce.Job:  map 0% reduce 0%
+2020-10-30 18:00:25,910 INFO mapreduce.Job: Job job_local194963239_0001 failed with state FAILED due to: NA
+2020-10-30 18:00:25,927 INFO mapreduce.Job: Counters: 0
+2020-10-30 18:00:25,928 ERROR streaming.StreamJob: Job not successful!
+Streaming Command Failed!
