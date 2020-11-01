@@ -46,11 +46,13 @@ def seq_op(accumulator, element):
     assert isinstance(element[0], int)
     assert isinstance(element[1], float)
     assert isinstance(element[2], int)
+    # sums all tuple elements
     return tuple(map(sum, accumulator, element))
 
 
 # Combiner Operation : sums tuple
 def comb_op(accumulator1, accumulator2):
+    # sums all tuple elements
     return tuple(map(sum, accumulator1, accumulator2))
 
 
@@ -60,17 +62,18 @@ try:
     lines = sc.textFile('data/Taxi_Trips_151MB.csv')
     # data quality: remove empty lines
     non_empty_lines = lines.filter(lambda line: len(line) > 0)
-    # obtain pickup dropoff pairs
+    # obtain data columns
     data = non_empty_lines.map(lambda line: (get_line_data(line)))
+    # remove invalid lines
     data = data.filter(lambda elem: is_line_data_valid(elem))
+    # convert strings to numeric values
     data = data.map(lambda elem: convert_data(elem))
-
+    # define the initial value to the accumulator
     zero_val = (0, 0.0, 0)
+    # sums trip_seconds,trip_miles, counts using sequence and combine functions
     data = data.aggregateByKey(zero_val, seq_op, comb_op)
-
     # transforms into (key , (avg trip_seconds, avg trip_miles))
     data = data.map(lambda elem: (elem[0], (elem[1][0] / elem[1][2], elem[1][1] / elem[1][2])))
-
     # computes and iterates for all pickup locations
     for k, v in data.collect():
         # key / avg trip_seconds / avg trip_miles
