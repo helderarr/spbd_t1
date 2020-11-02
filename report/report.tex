@@ -245,6 +245,8 @@ We had here the opportunity to use another out-of-the-box function: \textit{dist
 
 \subsection{What is the expected duration and distance of a taxi ride, given the pickup region ID, the weekday (0=Monday, 6=Sunday) and time in format “hour AM/PM”?}
 
+We used for this exercise the \textit{aggregateByKey} function. It receives 2 parameters: The Zero value that we used to accumulate each record, the Sequential Operation function that computes the operation over two records and the Combiner Operation function that operates on the result of two Sequential Operations. In our case we used the same logic of summing all tuple members for both operations. Table \ref{output_2_3} shows an example of the obtained data.
+
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
 \caption{Results of 2.3}
@@ -263,38 +265,37 @@ We had here the opportunity to use another out-of-the-box function: \textit{dist
 \end{tabular}
 \end{table}
 \section{Conclusion}
-The conclusion goes here.
+
 \subsection{MapReduce}
 \begin{itemize}
-\item The Mappers and reducers are different programs.
-\item Control of program parameters like sorting from outside the program
+\item The Mappers and reducers are different standalone programs reading from Standard Input and writing in Standard Output. They don't have any dependency on any kind of Hadoop library.
+\item The MapReduce execution parameters can be modified by dependency injection and inversion of control on the \textit{hadoop} command. It allows to modify program parameters like sorting comparing criteria or columns.
 \end{itemize}
 \subsection{PySpark}
 \begin{itemize}
-\item PySpark RDD has a good set of out-of-the-box functions for helping us massaging the data in a performant and scalable way without the need of writing custo MapReduce implementations. The code becomes more readable and the implementation is scalable and performant.
-\item Lazy
+\item PySpark RDD has a good set of out-of-the-box functions for helping us massaging the data in a performant and scalable way without the need of writing custom MapReduce implementations. The code becomes more readable and the implementation is highly scalable by nature.
+\item PySpark programs are executed in a Lazy fashion. The execution graph is only triggered when we need to persist or show results. Like by executing the \textit{collect} function.
+\item Debugging PySpark can be tricky as the execution is distributed and parallelized. One good way of accomplishing it is by using design by contracts patterns like the invariants that we can evaluate using the \textit{assert} function.
 \end{itemize}
 
+\subsection{Performance}
+We compared the performance of Exercise 1 for MapReduce and Exercise 1 for PySpark and we obtained the values presented in Table \ref{perf_conclusion}. We choose these 2 problems because they present similar complexity over the same dataset. We noted a performance 64 times superior when using PySpark. \par
+For both MapReduce and PySpark we should avoid to use lists of Python, NumPy or Pandas. Those programming patterns aren't adapted to run on top of a distributed cluster and will not be scalable.
 
-
-
-
-% conference papers do not normally have an appendix
-
-
-
-% use section* for acknowledgment
-\ifCLASSOPTIONcompsoc
-  % The Computer Society usually uses the plural form
-  \section*{Acknowledgments}
-\else
-  % regular IEEE prefers the singular form
-  \section*{Acknowledgment}
-\fi
-
-
-The authors would like to thank...
-
+\begin{table}[!t]
+\renewcommand{\arraystretch}{1.3}
+\caption{Performance comparison MapReduce / PySpark}
+\label{perf_conclusion}
+\centering
+\begin{tabular}{c||c|c}
+\hline
+\bfseries Time & \bfseries MapReduce Ex. 1 & \bfseries PySpark Ex. 1 \\
+\hline\hline
+ user & 0m1.799s           & 26.3 ms \\
+ sys  & 0m1.035s           & 17.8 ms \\
+\hline
+\end{tabular}
+\end{table}
 
 
 
