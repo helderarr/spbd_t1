@@ -115,7 +115,7 @@ The Dataset consists in a collection of taxi trip records in some city, includin
 \section{MapReduce}
 We used MapReduce to create indexes for answering the following queries:
 \subsection{How many trips were started in each year present in the data set?}
-We developed a pair of Map and Reduce programs for running on top of Hadoop. \par The Mapper processes each line of the provided CSV file. It cleans its contents and extracts the respective year. As the objective is to count the trips per year and because each line represents 1 trip, it outputs the year as key \textit{(K)} and 1 \textit{(one trip)} as value \textit{(V)}. \par The Reducer will receive a sequence of the records extracted from the mappers, ordered by key. The objective is to sum all values for the same key and output a record with the following format: \textit{(year,sum of trips)}. Table \ref{output_1_1} shows an example of the obtained data.
+We developed a pair of Map and Reduce programs for running on top of Hadoop. \par The Mapper processes each line of the provided CSV file. It cleans its contents and extracts the respective year. As the objective is to count the trips per year and because each line represents 1 trip, it outputs the year as key \textit{(K)} and 1 \textit{(one trip)} as value \textit{(V)}. \par The Reducer will receive a sequence of the records extracted from the mappers, ordered by key. The objective is to sum all values for the same key and output a record with the following format: \textit{(year,sum of trips)}. Table \ref{output_1_1} shows an example of the obtained data. \par The obtained performance counters were: real	0m1.715s / user	0m1.799s / sys	0m1.035s
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
 \caption{Results of 1.1}
@@ -135,7 +135,7 @@ We developed a pair of Map and Reduce programs for running on top of Hadoop. \pa
 \end{table}
 
 \subsection{For each of the 24 hours of the day, how many taxi trips there were, what was their average trip miles and trip total cost?}
-We developed a pair of Map and Reduce programs for running on top of Hadoop. \par Here as the objective is to calculate an average, the Mapper will extract the trip miles and trip values from each line. The Reducer will sum the number of lines together with the sum of trip miles and trip cost. After iterating each key (hour) it outputs the average values by dividing the sums of trip miles and cost by the trip counts. Table \ref{output_1_2} shows an example of the obtained data.
+We developed a pair of Map and Reduce programs for running on top of Hadoop. \par Here as the objective is to calculate an average, the Mapper will extract the trip miles and trip values from each line. The Reducer will sum the number of lines together with the sum of trip miles and trip cost. After iterating each key (hour) it outputs the average values by dividing the sums of trip miles and cost by the trip counts. Table \ref{output_1_2} shows an example of the obtained data. \par The obtained performance counters were: real	0m14.577s / user 0m16.873s / sys 0m5.236s.
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
 \caption{Results of 1.2}
@@ -156,7 +156,7 @@ We developed a pair of Map and Reduce programs for running on top of Hadoop. \pa
 \end{table}
 
 \subsection{For each of the 24 hours of the day, which are the 5 most popular routes according to the the total number of taxi trips? Also report and the average fare.}
-This problem wasn't trivially solvable with a single pair of MapReduce. Thus we created 2 MapReduce pairs: The first one behaves like the previous exercise, just adding the route to the grouping key. The second Mapper calculates a reverse order ranking, by subtracting the trip count from a very large number and concatenates it at the end of the key. The infrastructure sorts then the records by key (hour / route / order) and passes them to the second Reducer that simply prints out the first 5 records for each key. Table \ref{output_1_3} shows an example of the obtained data. \par Conversely we could opt by outputting the original counts from the Mapper and instantiate a specific Comparator using dependency injection in the infrastructure. However after testing this approach, by using \textit{KeyFieldBasedComparator} class we realised that the performance was substantially reduced as by Table \ref{perf_1_4}.
+This problem wasn't trivially solvable with a single pair of MapReduce. Thus we created 2 MapReduce pairs: The first one behaves like the previous exercise, just adding the route to the grouping key. The second Mapper calculates a reverse order ranking, by subtracting the trip count from a very large number and concatenates it at the end of the key. The infrastructure sorts then the records by key (hour / route / order) and passes them to the second Reducer that simply prints out the first 5 records for each key. Table \ref{output_1_3} shows an example of the obtained data. \par Conversely we could opt by outputting the original counts from the Mapper and instantiate a specific Comparator using dependency injection in the infrastructure. However after testing this approach, by using \textit{KeyFieldBasedComparator} class we realised that the performance of the second MapReduce was substantially penalised as by Table \ref{perf_1_4}. We should also consider that the first MapRedude for both alternatives presented the following performance indicators: real 0m12.625s / user 0m15.753s / sys 0m5.100s.
 
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -200,6 +200,9 @@ We used PySpark RDD to create indexes for answering the following queries:
 \subsection{What is the accumulated number of taxi trips per month?}
 We developed a small Python programs that instantiates the Spark context for obtaining this insight.\par It starts by reading the dataset,  followed by a filter for eliminating empty lines. This out-of-the-box filter function is a big simplification when comparing with MapReduce, where we would need to create Mapper and a Reducer to accomplish the same result.  \par
 The next 2 steps \textit{map} and \textit{reduceByKey} behave mostly like a MapReduce pair. For the \textit{reduceByKey} we use an operation \textit{add} that receives 2 values and calculates the addition. Table \ref{output_2_1} shows an example of the obtained data.
+\par
+The obtained performance counters were: CPU times: user 26.3 ms, sys: 17.8 ms, total: 44.1 ms
+
 
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -221,7 +224,8 @@ The next 2 steps \textit{map} and \textit{reduceByKey} behave mostly like a MapR
 \end{table}
 
 \subsection{For each pickup region, report the list of unique dropoff regions?}
-We had here the opportunity to use another out-of-the-box function: \textit{distinct}. In a single line we can avoid to code a MapReduce pair of programs. \par Another interesting construction was the \textit{groupByKey} function that allows us to collect all the RDD values in a single list without the need for coding any specific iterator.  Table \ref{output_2_2} shows an example of the obtained data.
+We had here the opportunity to use another out-of-the-box function: \textit{distinct}. In a single line we can avoid to code a MapReduce pair of programs. \par Another interesting construction was the \textit{groupByKey} function that allows us to collect all the RDD values in a single list without the need for coding any specific iterator.  Table \ref{output_2_2} shows an example of the obtained data.  \par
+The obtained performance counters were: CPU times: user 125 ms, sys: 65.5 ms, total: 190 ms
 
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -245,7 +249,8 @@ We had here the opportunity to use another out-of-the-box function: \textit{dist
 
 \subsection{What is the expected duration and distance of a taxi ride, given the pickup region ID, the weekday (0=Monday, 6=Sunday) and time in format “hour AM/PM”?}
 
-We used for this exercise the \textit{aggregateByKey} function. It receives 2 parameters: The Zero value that we used to accumulate each record, the Sequential Operation function that computes the operation over two records and the Combiner Operation function that operates on the result of two Sequential Operations. In our case we used the same logic of summing all tuple members for both operations. Table \ref{output_2_3} shows an example of the obtained data.
+We used for this exercise the \textit{aggregateByKey} function. It receives 2 parameters: The Zero value that we used to accumulate each record, the Sequential Operation function that computes the operation over two records and the Combiner Operation function that operates on the result of two Sequential Operations. In our case we used the same logic of summing all tuple members for both operations. Table \ref{output_2_3} shows an example of the obtained data. \par
+The obtained performance counters were: CPU times: user 2.74 s, sys: 1.11 s, total: 3.85 s
 
 \begin{table}[!t]
 \renewcommand{\arraystretch}{1.3}
@@ -330,6 +335,9 @@ We used for this exercise the \textit{aggregateByKey} function. It receives 2 pa
 J. Lourenço, \emph{Big Data Processing Systems — Project nº 1}, 2020/21.\hskip 1em plus
   0.5em minus 0.4em\relax DI, FCT, UNL, PT.
 
+\bibitem{IEEEhowto:bdps_lect}
+J. Lourenço, \emph{Big Data Processing Systems — Class Lectures}, 2020/21.\hskip 1em plus
+  0.5em minus 0.4em\relax DI, FCT, UNL, PT.
 \bibitem{IEEEhowto:test}
 Thomas Erl, Wajid Khattak and Paul Buhler \emph{Big Data Fundamentals}, 2016\hskip 1em plus 0.5em minus 0.4em\relax Prentice Hall.
 

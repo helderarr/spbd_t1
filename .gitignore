@@ -76,5 +76,5 @@ fabric.properties
 
 /dist/
 /venv/
-/venv/bin/
 .idea
+/*.zip
